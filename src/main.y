@@ -8,13 +8,18 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+/*Primera parte do programa que faz ligação entre o LEX e YACC, mais a 
+variével "valido" que sera a responsável pelo printf final*/
 
 void yyerror(char *c);
 int yylex(void);
  
 int valido = 0;
 
+/*Os tokens definidos abaixo, são todos os valores terminais que dividimos olhando 
+o exemplo maximo de JSON. As nossas regras foram formuladas a partir de cada teste
+ou seja, a cada nova estrutura apresentada de TOKENS, acrescentavamos sua determinada 
+regra*/
 %}
 
 
@@ -58,7 +63,7 @@ void yyerror(char *s) {
 
   
 }
-
+/*Por final, verificamos nossa variável e printamos de acordo com a validade da entrada*/
 int main() {
   
   	yyparse();

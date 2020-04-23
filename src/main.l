@@ -1,3 +1,8 @@
+/*
+/* Data de submissao: 23/04/2020
+ * Nome: Lucas Leite Tavares  
+ * RA: 156377
+ */
 
 %{
 #include<stdio.h>
@@ -8,7 +13,7 @@ void yyerror(char *);
 
 %}
 
-
+/*Nosso dicionário de Tokens, que faz a ligação sintática entre os programas*/
 %%
 
 [{] { 
